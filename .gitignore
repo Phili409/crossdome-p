@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# C extensions
+*.c
+*.o
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Pytest cache
+.pytest_cache/
+
+# Cache files
+*.cache
+*.log
+*.out
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# macOS file system metadata
+.DS_Store
+
+# Large datasets
+bio-database/*.csv
+bio-database/*.rda
+
+# Ignore Docker build files if you generate them later
+*.dockerignore
+Dockerfile
+
+# Ignore environment configuration
+.env
