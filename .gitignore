@@ -44,10 +44,6 @@ ENV/
 # macOS file system metadata
 .DS_Store
 
-# Large datasets
-bio-database/*.csv
-bio-database/*.rda
-
 # Ignore Docker build files if you generate them later
 *.dockerignore
 Dockerfile
