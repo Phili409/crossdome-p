@@ -1,7 +1,7 @@
 # Imported libraries
 import pandas as pd
 import datetime
-from typing import List 
+from typing import List, Dict, Any
 
 
 
@@ -69,3 +69,37 @@ class xrResult:
     def add_analysis(self, analysis_data: dict):
         """Add analysis data."""
         self.analysis = analysis_data
+        
+    def select (self, columns:List[str]) -> 'xrResult':
+        """
+        Select specific columns from the result DataFrame.
+        
+        :param columns: A list of column names to keep in  the result 
+        :return: A new xrResult object with selected columns
+        """
+        self.result = self.result[columns]
+        return self
+    
+    def filter (self, condition:Any) -> 'xrResult':
+        """
+        Filter the result DataFrame based on a condition.
+        
+        :param condition: A boolean condition to filter rows 
+        :return: A new xrResult object with filtered rows.
+        """
+        
+        self.result = self.result.query(condition)
+        return self 
+    
+    def mutate (self, **kwargs) -> 'xrResult':
+        """ 
+        Add or modify columns in the result DataFrame 
+        
+        :param kwargs: Column names and their respective values to add/modify in the DataFrame
+        :return: A new xrResult with mutated columns
+        """
+        
+        for key, value in kwargs.items():
+            self.result[key] = value 
+        return self
+        
