@@ -7,7 +7,7 @@ import pandas as pd
 from crossdome.core_classes import xrBackground, xrResult
 
 # Import core functions 
-from crossdome.core_functions import cross_compose, calculate_relatedness, cross_pair_summary, cross_write
+from crossdome.core_functions import cross_compose, calculate_relatedness, cross_pair_summary, cross_write, cross_substitution_matrix
 
 """
 Unit tests for the core functions in the CrossDome project.
