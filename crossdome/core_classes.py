@@ -3,8 +3,6 @@ import pandas as pd
 import datetime
 from typing import List, Dict, Any
 
-
-
 class xrBackground:
     """
     A class to represent the CrossDome background data holding peptides and related stats.
@@ -53,7 +51,7 @@ class xrResult:
         self.expression = {}
         self.analysis = {}
         self.position_weight = position_weight
-        self.timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        self.timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     def __repr__(self):
         return f"xrResult(query={self.query}, rank_count={len(self.result)})"
