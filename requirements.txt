@@ -1,3 +1,7 @@
 pandas
 numpy
 matplotlib
+scipy
+pytest
+unittest
+seaborn
